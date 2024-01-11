@@ -132,7 +132,7 @@ Display the login form
 <body>
     <h1>Welcome To Website</h1>
     <div class="message">${message}</div>
-    <a href="farmert.jsp">Are You Farmer?</a>
+    <a href="farmerRegistration.jsp">Are You Farmer?</a>
     <br>
     <a href="view-student">Are You Bidder?</a>
 </body>

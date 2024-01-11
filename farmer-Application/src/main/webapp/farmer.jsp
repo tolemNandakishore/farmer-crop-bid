@@ -1,4 +1,4 @@
-[12:09 AM] Tolem  Kishore
+
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
@@ -101,7 +101,7 @@
  
     <h2>Farmer Registration</h2>
  
-    <form method="post" action="registerFarmer">
+    <form method="post" action="add-farmer">
 
         <!-- Farmer Personal Details -->
 
