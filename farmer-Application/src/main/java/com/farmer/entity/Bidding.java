@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -23,6 +25,8 @@ public class Bidding {
 	@Column(name="Current_Price")
 	private Double currentPrice;
 	
+	@OneToMany
+	@JoinColumn(name="Crop_Id")
 	private Crops crops;
 	
 	@Column(name="Base_Price")

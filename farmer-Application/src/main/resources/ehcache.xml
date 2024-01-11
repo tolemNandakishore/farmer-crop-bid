@@ -6,6 +6,6 @@
 		memoryStoreEvictionPolicy="LRU">
 	</defaultCache>
 
-	<cache name="com.farmer"
+	<cache name="com.farmer.entity"
 		maxElementsInMemory="1000" />
 </ehcache>

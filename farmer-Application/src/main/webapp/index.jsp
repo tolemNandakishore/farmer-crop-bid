@@ -1,4 +1,4 @@
-
+<%-- 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 
 <!DOCTYPE html>
@@ -15,7 +15,7 @@
 
 <body>
  
-<%-- Check if the user is trying to log in --%>
+Check if the user is trying to log in
 
 <%
 
@@ -49,7 +49,7 @@
 
 %>
  
-<%-- Display the login form --%>
+Display the login form
 
 <form method="post" action="login.jsp">
 
@@ -77,4 +77,63 @@
  
 </body>
 
+</html>
+ --%>
+ 
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To Website</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .message {
+            color: red;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+            margin-top: 10px;
+            display: inline-block;
+            padding: 10px 20px;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        a:hover {
+            background-color: #3498db;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome To Website</h1>
+    <div class="message">${message}</div>
+    <a href="farmert.jsp">Are You Farmer?</a>
+    <br>
+    <a href="view-student">Are You Bidder?</a>
+</body>
 </html>
