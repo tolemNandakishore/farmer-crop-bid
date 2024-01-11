@@ -7,5 +7,7 @@ import com.farmer.entity.FarmerRegistration;
 @Service
 public interface FarmerService {
 
-	void farmerRegistration(FarmerRegistration farmerRegistration);	
+	void farmerRegistration(FarmerRegistration farmerRegistration);
+
+	String farmerLogin(String emailId, String password);	
 }
