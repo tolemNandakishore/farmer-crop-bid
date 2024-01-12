@@ -4,38 +4,34 @@
     <title>Bidder Dashboard</title>
 </head>
 <body>
-    <h2>Bidder Dashboard</h2>
-
     <h3>Welcome, ${bidder.bidderName}!</h3>
 
-    <table border="1">
-        <thead>
+  <table border="1">
+    <thead>
+        <tr>
+            <th>Crop ID</th>
+            <th>Crop Name</th>
+            <th>Crop Type</th>
+            <th>Quantity</th>
+            <th>Base Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <c:forEach var="crop" items="${crops}">
             <tr>
-                <th>Bidding ID</th>
-                <th>Crop Name</th>
-                <th>Crop Type</th>
-                <th>Quantity</th>
-                <th>Base Price</th>
-                <th>Current Price</th>
-                <th>Actions</th>
+                <td>${crop.cropId}</td>
+                <td>${crop.cropName}</td>
+                <td>${crop.cropType}</td>
+                <td>${crop.quantity}</td>
+                <td>${crop.basePrice}</td>
+                <td>
+                    <a href="<c:url value='/enterBid/${crop.cropId}'/>">Enter Bid</a>
+                </td>
             </tr>
-        </thead>
-        <tbody>
-            <c:forEach var="bidding" items="${bidderBiddings}">
-                <tr>
-                    <td>${bidding.biddingId}</td>
-                    <td>${bidding.cropName}</td>
-                    <td>${bidding.cropType}</td>
-                    <td>${bidding.quantity}</td>
-                    <td>${bidding.basePrice}</td>
-                    <td>${bidding.currentPrice}</td>
-                    <td>
-                        <a href="<c:url value='/enterBid/${bidding.biddingId}'/>">Enter Bid</a>
-                    </td>
-                </tr>
-            </c:forEach>
-        </tbody>
-    </table>
+        </c:forEach>
+    </tbody>
+</table>
 
 </body>
 </html>

@@ -27,7 +27,15 @@ public class BidderService {
     }
     
     
-    public Optional<BidderRegistration> findById(long id) {
-        return bidderRepo.findById(id);
-    }
+    
+
+
+
+public boolean authenticateBidder(Long bidderId, String password) {
+    // Fetch bidder by ID
+    Optional<BidderRegistration> optionalBidder = bidderRepo.findById(bidderId);
+
+    // Check if bidder exists and if the password matches
+    return optionalBidder.isPresent() && optionalBidder.get().getPassword().equals(password);
+}
 }

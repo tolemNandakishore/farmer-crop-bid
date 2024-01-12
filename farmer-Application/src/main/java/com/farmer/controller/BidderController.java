@@ -21,12 +21,25 @@ public class BidderController {
         return "index.jsp";
     }
     
-    @RequestMapping("/edit-std")
-    public String fetchByID(@RequestParam int rollno, Model model) {
-        BidderRegistration bidder = bidderService.findById(rollno).orElse(null);
-        // Handle the case when the bidder is not found, and set it to the model if needed
-        model.addAttribute("bidder", bidder);
-        return "cropsToBid.jsp"; 
+    @GetMapping("/login")
+    public String showLoginForm() {
+        return "login";
+    }
+
+    @PostMapping("/loginBidder")
+    public String loginBidder(@RequestParam("bidderId") Long bidderId,
+                              @RequestParam("password") String password,
+                              Model model) {
+
+        // Add logic to authenticate bidder (check credentials, etc.)
+        boolean isValidBidder = bidderService.authenticateBidder(bidderId, password);
+        if (isValidBidder) {
+            // Redirect to bidder dashboard or another page upon successful login
+            return "redirect:/CropsToBid.jsp";
+        } else {
+            model.addAttribute("error", "Invalid credentials. Please try again.");
+            return "Bidderlogin.jsp";
+        }
     }
    
 }
