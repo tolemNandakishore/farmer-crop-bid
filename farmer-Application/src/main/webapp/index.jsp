@@ -1,37 +1,50 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Welcome To Website</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .message {
+            color: red;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+            margin-top: 10px;
+            display: inline-block;
+            padding: 10px 20px;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        a:hover {
+            background-color: #3498db;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-
-<c:if test="${not empty message}">
+    <h1>Welcome To Our Website</h1>
     <div class="message">${message}</div>
-</c:if>
-
-<form method="post" action="login">
-
-    <label for="email">Email:</label>
-    <input type="text" id="email" name="email" required><br>
-
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required><br>
-
-    <input type="submit" value="Login">
-</form>
-
-<p><a href="forgot-password.jsp">Forgot Password?</a></p>
-
-<p>New User? <a href="register.jsp">Register Here</a></p>
-
-<p>Are you a Farmer or Bidder?</p>
-<p><input type="radio" name="userType" value="farmer" checked> Farmer</p>
-<p><input type="radio" name="userType" value="bidder"> Bidder</p>
-
-<p>Bidder <a href="bidderRegistration.jsp">Register Here</a></p>
-
+    <a href="farmerRegistration.jsp">Are You a Farmer?</a>
+    <br>
+    <a href="bidderRegistraion.jsp">Are You a Bidder?</a>
 </body>
 </html>

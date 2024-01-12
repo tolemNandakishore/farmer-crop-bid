@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -28,11 +29,11 @@ public class BiddingHistory {
 	@JoinColumn(name="Crop_Id")
 	private Crops crops;
 	
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(name="Bidder_Id")
 	private BidderRegistration bidderRegistration;	
 	
-	@OneToMany
+	@ManyToOne
 	@JoinColumn(name="Bidding_Id")
 	private Bidding bidding;
 	

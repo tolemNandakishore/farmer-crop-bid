@@ -14,9 +14,7 @@ import java.util.List;
 public class BiddingController {
 
     @Autowired
-    private BiddingService bidService;
-
-    
+    private BiddingService bidService;  
     
 
     

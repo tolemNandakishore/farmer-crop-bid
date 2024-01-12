@@ -27,12 +27,11 @@ public class FarmerController {
 		model.put("message","Registration Completed Successfully..!!");
 		return "farmerRegistration.jsp";	
 	}
-	@RequestMapping(name="/admin-login", method=RequestMethod.POST)  
-    public String farmerLogin(@RequestParam String emailId, @RequestParam String password) {
-		   String response=  farmerService.farmerLogin(emailId,password);
-		   return "farmerRegistration.jsp";     
-    }
 	
-	
+//	@RequestMapping(name="/admin-login", method=RequestMethod.POST)  
+//    public String farmerLogin(@RequestParam String emailId, @RequestParam String password) {
+//		   String response=  farmerService.farmerLogin(emailId,password);
+//		   return "farmerDashbord.jsp";     
+//    }	
 
 }

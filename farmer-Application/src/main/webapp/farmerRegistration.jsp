@@ -54,12 +54,26 @@
 
     <p>New User? <a href="farmer.jsp">Register Here</a></p>
 
-    <p>Are you a Farmer or Bidder?</p>
+    <!-- <p>Are you a Farmer or Bidder?</p>
 
     <p><input type="radio" name="userType" value="farmer" checked> Farmer</p>
 
     <p><input type="radio" name="userType" value="bidder"> Bidder</p>
-
+ -->
 </body>
 
 </html>
+<script>
+$(document).click(function() {	
+		$.ajax({
+			url : 'http://localhost:8080/student-management-app/add-farmer?=',
+			data : {
+				eMail : $('#email').val();
+		        password:$('#password').val();		       
+			},
+			success : function(responseText) {
+				//alert.(JSON.stringify(value)
+				$('#ajaxGetUserServletResponse').text(JSON.stringify(responseText));
+			}
+		});
+});

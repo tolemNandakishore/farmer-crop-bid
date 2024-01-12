@@ -36,7 +36,7 @@ public class BidderRegistration {
 	@Column(name = "B_Pincode")
 	private int pincocde;
 	
-	@Column(name = "B-Acc_No")
+	@Column(name = "B_Acc_No")
 	private Long bankAccountNo;
 	
 	@Column(name = "B_Ifsc_No")

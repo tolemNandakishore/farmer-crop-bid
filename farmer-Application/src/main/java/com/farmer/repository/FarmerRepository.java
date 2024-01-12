@@ -8,6 +8,6 @@ import com.farmer.entity.FarmerRegistration;
 @Repository
 public interface FarmerRepository extends JpaRepository<FarmerRegistration, Long>{
 
-	String findByEmailIdAndPassword(String emailId, String password);
+	String findByMailIdAndPassword(String emailId, String password);
 
 }

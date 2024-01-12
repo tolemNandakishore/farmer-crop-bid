@@ -32,7 +32,7 @@ public class FarmerRegistration {
 	private Long ifscNo;
 	@Column(name="F_Aadhar_No")
 	private Long aadharNo;
-	@Column(name="F_Aadhar_No")
+	@Column(name="F_Pan_No")
 	private String panNo;
 	@Column(name="F_Certificate")
 	private String certificate;	

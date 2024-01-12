@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -21,12 +22,44 @@ public class Bidding {
 	private Double bidPrice;
 	
 
-	@OneToMany
+	@ManyToOne
 	@JoinColumn(name="Crop_Id")
 	private Crops crops;
 	
-	@OneToMany
+	@ManyToOne
 	@JoinColumn(name="Bidder_Id")
 	private BidderRegistration bidder;
+
+	public Long getBiddingId() {
+		return biddingId;
+	}
+
+	public void setBiddingId(Long biddingId) {
+		this.biddingId = biddingId;
+	}
+
+	public Double getBidPrice() {
+		return bidPrice;
+	}
+
+	public void setBidPrice(Double bidPrice) {
+		this.bidPrice = bidPrice;
+	}
+
+	public Crops getCrops() {
+		return crops;
+	}
+
+	public void setCrops(Crops crops) {
+		this.crops = crops;
+	}
+
+	public BidderRegistration getBidder() {
+		return bidder;
+	}
+
+	public void setBidder(BidderRegistration bidder) {
+		this.bidder = bidder;
+	}
 	
 }
