@@ -34,7 +34,7 @@ public class BidderRegistration {
 	private String state;
 	
 	@Column(name = "B_Pincode")
-	private int pincocde;
+	private int pincode;
 	
 	@Column(name = "B_Acc_No")
 	private Long bankAccountNo;
@@ -106,12 +106,12 @@ public class BidderRegistration {
 		this.state = state;
 	}
 
-	public int getPincocde() {
-		return pincocde;
+	public int getPincode() {
+		return pincode;
 	}
 
-	public void setPincocde(int pincocde) {
-		this.pincocde = pincocde;
+	public void setPincode(int pincocde) {
+		this.pincode = pincocde;
 	}
 
 	public Long getBankAccountNo() {

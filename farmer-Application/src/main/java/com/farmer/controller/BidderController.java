@@ -3,6 +3,7 @@ package com.farmer.controller;
 import com.farmer.entity.BidderRegistration;
 import com.farmer.service.BidderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -15,16 +16,16 @@ public class BidderController {
     private BidderService bidderService;
 
     
-    @RequestMapping("/register")
-    public String addBidder(@ModelAttribute BidderRegistration bidder, Model model) {
+    @PostMapping(path = "/register", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+    public String addBidder( BidderRegistration bidder) {
         bidderService.addBidder(bidder);
-        return "index.jsp";
+        return "/index.jsp";
     }
     
-    @GetMapping("/login")
-    public String showLoginForm() {
-        return "login";
-    }
+	/*
+	 * @GetMapping("/login") public String showLoginForm() { return
+	 * "/BidderLogin.jsp"; }
+	 */
 
     @PostMapping("/loginBidder")
     public String loginBidder(@RequestParam("bidderId") Long bidderId,

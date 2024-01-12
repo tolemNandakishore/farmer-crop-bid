@@ -6,7 +6,7 @@
 <body>
     <h2>Bidder Login</h2>
 
-    <form action="/bidder/loginBidder" method="post">
+    <form action="bidder/loginBidder" method="post">
         <label for="bidderId">Bidder ID:</label>
         <input type="text" name="bidderId" required><br>
 
@@ -14,7 +14,7 @@
         <input type="password" name="password" required><br>
 
         <input type="submit" value="Login">
-         <input type="submit" value="bidderRegistration.jsp">
+         <a href="bidderRegistration.jsp">Rigester</a>
     </form>
 
 </body>

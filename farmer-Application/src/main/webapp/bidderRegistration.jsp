@@ -14,7 +14,7 @@
 <div class="container mt-5">
     <h2 class="mb-4">Bidder Registration Form</h2>
 
-    <form action="processBidderRegistration" method="post">
+    <form action="bidder/register" method="post">
         <!-- Bidder Name -->
         <div class="form-group">
             <label for="bidderName">Bidder Name:</label>
