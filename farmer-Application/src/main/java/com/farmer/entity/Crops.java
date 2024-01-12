@@ -17,12 +17,16 @@ public class Crops {
 	@Column(name="Crop_Id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long cropId;
+	
 	@Column(name="Crop_Name")
 	private String cropName;
+	
 	@Column(name="Crop_Type")
 	private String cropType;
+	
 	@Column(name="Fertilizer_Type")
 	private String fertilizerType;
+	
 	@Column(name="quantity")
 	private int quantity;
 	@Column(name="Base_Price")

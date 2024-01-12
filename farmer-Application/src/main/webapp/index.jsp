@@ -74,7 +74,7 @@
 <p><input type="radio" name="userType" value="farmer" checked> Farmer</p>
 
 <p><input type="radio" name="userType" value="bidder"> Bidder</p>
- 
+ <p>bidder <a href="bidderRegistraion.jsp">Register Here</a></p>
 </body>
 
 </html>

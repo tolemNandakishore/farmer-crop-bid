@@ -14,19 +14,25 @@ public class Bidding {
 	@Column(name="Bidding_Id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long biddingId;
+	
 	@Column(name="Crop_name")
 	private String cropName;
+	
 	@Column(name="Crop_type")
 	private String cropType;
+	
 	@Column(name="Quantity")
 	private int quantity;
+	
 	@Column(name="Current_Price")
 	private Double currentPrice;
+	
 	
 	private Crops crops;
 	
 	@Column(name="Base_Price")
 	private Double basePrice;
+	
 	public Long getBiddingId() {
 		return biddingId;
 	}
