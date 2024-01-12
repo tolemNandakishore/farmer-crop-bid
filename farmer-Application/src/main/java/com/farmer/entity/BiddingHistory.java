@@ -7,6 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -17,16 +20,29 @@ public class BiddingHistory {
 	@Column(name="Bid_H_Id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long bidHistoryId;
+	
 	@Column(name="Sold_Price")
 	private double soldPrice;
 	
+	@OneToOne
+	@JoinColumn(name="Crop_Id")
 	private Crops crops;
-	private BidderRegistration bidderRegistration;
+	
+	@OneToOne
+	@JoinColumn(name="Bidder_Id")
+	private BidderRegistration bidderRegistration;	
+	
+	@OneToMany
+	@JoinColumn(name="Bidding_Id")
 	private Bidding bidding;
+	
 	@Column(name="Date")
 	private LocalDate date;
+	
 	@Column(name="Total_Price")
 	private Double totalPrice;
+	
+	
 	public Long getBidHistoryId() {
 		return bidHistoryId;
 	}

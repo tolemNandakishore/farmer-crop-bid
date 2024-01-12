@@ -35,7 +35,22 @@ public class FarmerRegistration {
 	@Column(name="F_Aadhar_No")
 	private String panNo;
 	@Column(name="F_Certificate")
-	private String certificate;
+	private String certificate;	
+	@Column(name="password")
+	private String password;
+			
+	public Long getIfscNo() {
+		return ifscNo;
+	}
+	public void setIfscNo(Long ifscNo) {
+		this.ifscNo = ifscNo;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
 	public Long getFarmerId() {
 		return farmerId;
 	}
