@@ -40,6 +40,6 @@
     <div class="message">${message}</div>
     <a href="farmerRegistration.jsp">Are You Farmer?</a>
     <br>
-    <a href="bidderRegistration.jsp">Are You Bidder?</a>
+    <a href="BidderLogin.jsp">Are You Bidder?</a>
 </body>
 </html>
