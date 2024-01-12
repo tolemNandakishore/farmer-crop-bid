@@ -4,6 +4,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,7 +21,7 @@ public class FarmerController {
 	@Autowired
 	private FarmerService farmerService;	
 	
-	@RequestMapping(name="/add-farmer", method=RequestMethod.POST)
+	@PostMapping("/add-farmer")
 	public String farmerRegistration(FarmerRegistration farmerRegistration,  Map model) {
 		//studentRepository.save(farmerRegistration);		
 		farmerService.farmerRegistration(farmerRegistration);
@@ -28,10 +29,10 @@ public class FarmerController {
 		return "farmerRegistration.jsp";	
 	}
 	
-//	@RequestMapping(name="/admin-login", method=RequestMethod.POST)  
-//    public String farmerLogin(@RequestParam String emailId, @RequestParam String password) {
-//		   String response=  farmerService.farmerLogin(emailId,password);
-//		   return "farmerDashbord.jsp";     
-//    }	
+	@PostMapping("/farmer-login")  
+    public String farmerLogin(@RequestParam String emailId, @RequestParam String password) {
+		   String response=  farmerService.farmerLogin(emailId,password);
+		   return "cropdetail.jsp";     
+    }	
 
 }

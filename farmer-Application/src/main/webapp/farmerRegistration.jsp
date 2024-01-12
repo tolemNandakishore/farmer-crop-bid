@@ -38,7 +38,7 @@
     <% // ... your existing Java code here %>
 
     <%-- Display the login form --%>
-    <form method="post" action="add-farmer" onsubmit="return validateForm();">
+    <form method="post" action="farmer-login" onsubmit="return validateForm();">
 
         <label for="email">Email:</label>
         <input type="text" id="email" name="email" required><br>
@@ -54,16 +54,10 @@
 
     <p>New User? <a href="farmer.jsp">Register Here</a></p>
 
-    <!-- <p>Are you a Farmer or Bidder?</p>
-
-    <p><input type="radio" name="userType" value="farmer" checked> Farmer</p>
-
-    <p><input type="radio" name="userType" value="bidder"> Bidder</p>
- -->
 </body>
 
 </html>
-<script>
+<!-- <script>
 $(document).click(function() {	
 		$.ajax({
 			url : 'http://localhost:8080/student-management-app/add-farmer?=',
@@ -76,4 +70,4 @@ $(document).click(function() {
 				$('#ajaxGetUserServletResponse').text(JSON.stringify(responseText));
 			}
 		});
-});
+}); -->
