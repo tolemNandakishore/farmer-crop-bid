@@ -1,4 +1,3 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,20 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome To Website</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 20px;
-            text-align: center;
-        }
-
         h1 {
             color: #333;
+            text-align: center;
         }
 
         .message {
             color: red;
             font-weight: bold;
             margin-top: 20px;
+            text-align: center;
         }
 
         a {
@@ -41,10 +36,10 @@
     </style>
 </head>
 <body>
-    <h1>Welcome To Our Website</h1>
+    <h1>Welcome To Website</h1>
     <div class="message">${message}</div>
-    <a href="farmerRegistration.jsp">Are You a Farmer?</a>
+    <a href="farmerRegistration.jsp">Are You Farmer?</a>
     <br>
-    <a href="bidderRegistraion.jsp">Are You a Bidder?</a>
+    <a href="bidderRegistration.jsp">Are You Bidder?</a>
 </body>
 </html>
